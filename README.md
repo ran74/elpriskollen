@@ -10,7 +10,7 @@
 ---
 
 ## 📸 Dashboard Preview
-![Elpriskollen Pro Dashboard](./assets/image_4d7075.png)
+![Elpriskollen Pro Dashboard](elpris.png)
 
 ---
 
