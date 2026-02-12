@@ -1,37 +1,7 @@
-# Elpriskollen
-Elpriskollen Pro (Electricity Price Monitor) Elpriskollen Pro is a real-time desktop application built with Python and Tkinter. It provides Swedish energy consumers with up-to-the-minute data on electricity prices, specifically adapted for the new 15-minute (quarterly) pricing model (MTU).
-
-Features
-Real-time Quarterly Pricing: Displays the current spot price for the specific 15-minute window you are in.
-
-Total Cost Calculation: Includes Swedish energy tax, VAT, and certificates to show your actual cost per kWh.
-
-Smart Savings: Automatically calculates the cheapest continuous 60-minute window for high-energy tasks like laundry or EV charging.
-
-Weather Integration: Fetches local temperature and wind speeds to help correlate weather patterns with energy fluctuations.
-
-Automatic Configuration: On the first run, the app prompts for your Electricity Area (SE1-SE4) and city, saving these settings for future launches.
-
-Dynamic UI: The background color changes based on whether the current price is above or below the daily average.
-
-Installation
-Prerequisites
-Python 3.x
-
-requests library
-
-Bash
+I've analyzed your repository and the specific features we've developed (quarterly pricing, "Total Cost" calculation, and the auto-config wizard).Here is a high-quality, professional README designed specifically for ran74/elpriskollen.⚡ Elpriskollen Pro (MTU Edition)Elpriskollen Pro is a modern desktop dashboard designed for Swedish energy consumers. It provides real-time monitoring of electricity prices, fully optimized for the new 15-minute quarterly pricing model (MTU) introduced to the Swedish market.📌 Key FeaturesQuarterly Precision: Automatically tracks and displays the current 15-minute price interval.True Cost Calculation: Unlike basic apps, this calculates the Total Cost including:Spot Price + VAT (25%)Energy Tax (Energiskatt)Grid Transfer Fees (Nätöverföring)Smart Saving Window: Scans the next 24 hours to find the cheapest continuous 60-minute window for heavy appliances.Weather Intelligence: Local temperature and wind speed sync to help you understand price fluctuations.Auto-Setup Wizard: On first launch, the app prompts for your Electricity Area (SE1-SE4) and city, then remembers your choice.Dynamic UI: Cards change color (Green/Red) based on how the current price compares to the daily average.🛠️ Installation1. Clone & Install DependenciesEnsure you have Python installed. You only need the requests library.Bashgit clone https://github.com/ran74/elpriskollen.git
+cd elpriskollen
 pip install requests
-Running the Script
-Simply run the script via your terminal:
-
-Bash
-python elpris_gui.py
-Building an Executable (.exe)
-To create a standalone Windows application:
-
-Bash
-pip install pyinstaller
+2. Run the ApplicationBashpython elpris_gui.py
+📦 Create your own EXETo package the project into a single, standalone Windows executable that doesn't require Python to be installed:Bashpip install pyinstaller
 python -m PyInstaller --noconsole --onefile --name "Elpriskollen" elpris_gui.py
-How It Works
-The application fetches data from the Elpriset Just Nu API and weather data from the Open-Meteo API. It uses Python's threading to ensure the UI remains responsive while data is being fetched in the background every 5 minutes.
+The finished application will be waiting for you in the /dist folder.🖥️ Project StructureComponentFunctionSpot CardShows the raw market price for the current quarter.Total CardYour "Invoice Price" (The actual cost per kWh).Savings CardBest 1-hour window to start your dishwasher/EV charger.Average CardThe benchmark for the current 24-hour period.Weather CardReal-time local conditions from Open-Meteo.
