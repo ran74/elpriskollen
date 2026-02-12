@@ -1,7 +1,37 @@
-I've analyzed your repository and the specific features we've developed (quarterly pricing, "Total Cost" calculation, and the auto-config wizard).Here is a high-quality, professional README designed specifically for ran74/elpriskollen.⚡ Elpriskollen Pro (MTU Edition)Elpriskollen Pro is a modern desktop dashboard designed for Swedish energy consumers. It provides real-time monitoring of electricity prices, fully optimized for the new 15-minute quarterly pricing model (MTU) introduced to the Swedish market.📌 Key FeaturesQuarterly Precision: Automatically tracks and displays the current 15-minute price interval.True Cost Calculation: Unlike basic apps, this calculates the Total Cost including:Spot Price + VAT (25%)Energy Tax (Energiskatt)Grid Transfer Fees (Nätöverföring)Smart Saving Window: Scans the next 24 hours to find the cheapest continuous 60-minute window for heavy appliances.Weather Intelligence: Local temperature and wind speed sync to help you understand price fluctuations.Auto-Setup Wizard: On first launch, the app prompts for your Electricity Area (SE1-SE4) and city, then remembers your choice.Dynamic UI: Cards change color (Green/Red) based on how the current price compares to the daily average.🛠️ Installation1. Clone & Install DependenciesEnsure you have Python installed. You only need the requests library.Bashgit clone https://github.com/ran74/elpriskollen.git
-cd elpriskollen
+# ⚡ Elpriskollen Pro
+### *Smart Real-Time Electricity Monitoring for Sweden*
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows" alt="Windows">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+</p>
+
+---
+
+## 📸 Dashboard Preview
+![Elpriskollen Pro Dashboard](./assets/image_4d7075.png)
+
+---
+
+## 📥 Download & Install
+**The easiest way to use Elpriskollen Pro is to download the standalone executable.** 1. **[Download Elpriskollen.exe](https://github.com/ran74/elpriskollen/releases/latest)** (Click "Assets" and choose the `.exe` file).
+2. Run the file. Windows might show a "SmartScreen" warning—click **"More info"** and then **"Run anyway"**.
+3. On first launch, follow the Setup Wizard to select your elområde (SE1-SE4) and city.
+
+---
+
+## 🚀 Key Features
+* **Quarterly Pricing (MTU):** Real-time tracking of the new 15-minute price intervals.
+* **Invoice Price:** Calculates the final cost including VAT, Energy Tax (53.5 öre), and fees.
+* **Savings Wizard:** Finds the cheapest continuous **60-minute** block for high-energy tasks.
+* **Dynamic Colors:** Cards turn **Green** when prices are low and **Red** when they exceed the daily average.
+
+---
+
+## 🛠️ Build from Source
+If you prefer to run it using Python:
+```bash
+git clone [https://github.com/ran74/elpriskollen.git](https://github.com/ran74/elpriskollen.git)
 pip install requests
-2. Run the ApplicationBashpython elpris_gui.py
-📦 Create your own EXETo package the project into a single, standalone Windows executable that doesn't require Python to be installed:Bashpip install pyinstaller
-python -m PyInstaller --noconsole --onefile --name "Elpriskollen" elpris_gui.py
-The finished application will be waiting for you in the /dist folder.🖥️ Project StructureComponentFunctionSpot CardShows the raw market price for the current quarter.Total CardYour "Invoice Price" (The actual cost per kWh).Savings CardBest 1-hour window to start your dishwasher/EV charger.Average CardThe benchmark for the current 24-hour period.Weather CardReal-time local conditions from Open-Meteo.
+python elpris_gui.py
