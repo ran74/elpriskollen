@@ -15,7 +15,8 @@
 ---
 
 ## 📥 Download & Install
-**The easiest way to use Elpriskollen Pro is to download the standalone executable.** 1. **[Download Elpriskollen.exe](https://github.com/ran74/elpriskollen/releases/latest)** (Click "Assets" and choose the `.exe` file).
+**The easiest way to use Elpriskollen Pro is to download the standalone executable.** 
+1. **[Download Elpriskollen.exe](https://github.com/ran74/elpriskollen/releases/latest)** (Click "Assets" and choose the `.exe` file).
 2. Run the file. Windows might show a "SmartScreen" warning—click **"More info"** and then **"Run anyway"**.
 3. On first launch, follow the Setup Wizard to select your elområde (SE1-SE4) and choose city for the weather.
 
